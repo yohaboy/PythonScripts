@@ -2,13 +2,14 @@ import os
 import shutil
 from datetime import datetime
 
-source_folder = './important_files'
+source_folder = './my_important_files'
 backup_root = './backups'
 
 date_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-backup_folder = os.path.join(backup_root, f'backup_{date_str}')
+backup_name = f'backup_{date_str}'
+backup_path = os.path.join(backup_root, backup_name)
 
-shutil.copytree(source_folder, backup_folder)
+shutil.make_archive(backup_path, 'zip', source_folder)
 
-print(f'Backup created: {backup_folder}')
+print(f'Backup zip created: {backup_path}.zip')
 
