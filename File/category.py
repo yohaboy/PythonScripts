@@ -1,3 +1,5 @@
+#organize files by their category
+
 import os
 import shutil
 
