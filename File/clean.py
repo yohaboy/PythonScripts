@@ -1,3 +1,5 @@
+#python script for cleaning
+
 import os
 
 folder_path = './my_folder'
